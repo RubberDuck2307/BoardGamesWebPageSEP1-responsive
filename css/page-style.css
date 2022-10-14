@@ -1,0 +1,15 @@
+/*site settings*/
+*{
+    font-family: "Roboto Light", sans-serif;
+    color: black;
+}
+
+
+.purpleHr{
+    border-top: #564797 solid 5px;
+    margin-bottom: 30px;
+}
+
+.centerText{
+    text-align: center;
+}

@@ -1,0 +1,14 @@
+.active{
+    color: #564797 !important;
+}
+.nav-item{
+    font-weight: 600;
+    font-size: 18px;
+}
+.nav-item a:hover{
+    color: #564797 !important;
+}
+.navbar-toggler:focus{
+    outline: none;
+    box-shadow: none;
+}
