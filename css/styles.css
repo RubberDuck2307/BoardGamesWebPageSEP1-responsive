@@ -1,20 +1,23 @@
-*{
+* {
     font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 17px;
-line-height: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
 }
 
 
 #footer {
     background-color: #F3F3F3;
-    height: 8vw;    
-    margin: 0;
+
 }
 
-#footer a{
+#footer a {
     text-decoration: none;
     color: black;
+}
+
+#footer p{
+    color: gray;
 }
 
