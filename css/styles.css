@@ -21,3 +21,30 @@
     color: gray;
 }
 
+
+.btn-primary{
+    background-color: #4F418B;
+    border: 1px solid white;
+}
+
+.btn-primary:hover{
+    background-color: #261f68;
+    color: white;
+    border: 1px solid white;
+}
+.btn-primary:active:focus {
+    background-color: #261f68;
+    border: 3px solid #473B7D;
+}
+
+
+.tableHead{
+    background-color: #564797;
+}
+
+.tableHead th{
+    border-bottom: white;
+    color: white;
+    border-radius: 5px;
+
+}

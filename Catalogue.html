@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1/">
     <title>Catalogue</title>
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#toc">
 <header>
     <nav class="mx-lg-5 my-3 my-lg-4 navbar navbar-expand-lg">
         <div class=" mx-lg-5 container-fluid">
@@ -44,7 +44,316 @@
     </nav>
 </header>
 
-</body>
+<!-- Since I am a stupid monkey and I don‘t know how to do it another way. I am creating 2 containers one for size smaller than medium and one for the rest-->
+<div class="container d-md-none">
+    <div class="row">
+        <div class="col-12 d-grid">
+            <a class="btn btn-primary text-start" data-bs-toggle="collapse" href="#game1" role="button"
+               aria-expanded="false"
+               aria-controls="game1"> MONOPOLY</a>
+            <div class="collapse" id="game1">
+                <table class="table">
+                    <tr>
+                        <th>Number of players</th>
+                        <td>4 - 8</td>
+                    </tr>
+                    <tr>
+                        <th>Owner</th>
+                        <td>Bob</td>
+                    </tr>
+                    <tr>
+                        <th>Occupier</th>
+                        <td>Totally not Bob in disguise</td>
+                    </tr>
+                    <tr>
+                        <th>Borrowed on:</th>
+                        <td>17/10/2022</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 d-grid">
+            <a class="btn btn-primary text-start" data-bs-toggle="collapse" href="#game2" role="button"
+               aria-expanded="false"
+               aria-controls="game2">SOME OTHER GAME MORE BORING PROBABLY</a>
+            <div class="collapse" id="game2">
+                <table class="table">
+                    <tr>
+                        <th>Number of players</th>
+                        <td>4 - 8</td>
+                    </tr>
+                    <tr>
+                        <th>Owner</th>
+                        <td>Bob</td>
+                    </tr>
+                    <tr>
+                        <th>Occupier</th>
+                        <td>Totally not Bob in disguise</td>
+                    </tr>
+                    <tr>
+                        <th>Borrowed on:</th>
+                        <td>17/10/2022</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-12 d-grid">
+            <a class="btn btn-primary text-start" data-bs-toggle="collapse" href="#game3" role="button"
+               aria-expanded="false"
+               aria-controls="game3"> MONOPOLY</a>
+            <div class="collapse" id="game3">
+                <table class="table">
+                    <tr>
+                        <th>Number of players</th>
+                        <td>4 - 8</td>
+                    </tr>
+                    <tr>
+                        <th>Owner</th>
+                        <td>Bob</td>
+                    </tr>
+                    <tr>
+                        <th>Occupier</th>
+                        <td>Totally not Bob in disguise</td>
+                    </tr>
+                    <tr>
+                        <th>Borrowed on:</th>
+                        <td>17/10/2022</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 d-grid">
+            <a class="btn btn-primary text-start" data-bs-toggle="collapse" href="#game4" role="button"
+               aria-expanded="false"
+               aria-controls="game4">SOME OTHER GAME MORE BORING PROBABLY</a>
+            <div class="collapse" id="game4">
+                <table class="table">
+                    <tr>
+                        <th>Number of players</th>
+                        <td>4 - 8</td>
+                    </tr>
+                    <tr>
+                        <th>Owner</th>
+                        <td>Bob</td>
+                    </tr>
+                    <tr>
+                        <th>Occupier</th>
+                        <td>Totally not Bob in disguise</td>
+                    </tr>
+                    <tr>
+                        <th>Borrowed on:</th>
+                        <td>17/10/2022</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-12 d-grid">
+            <a class="btn btn-primary text-start" data-bs-toggle="collapse" href="#game5" role="button"
+               aria-expanded="false"
+               aria-controls="game5"> MONOPOLY</a>
+            <div class="collapse" id="game5">
+                <table class="table">
+                    <tr>
+                        <th>Number of players</th>
+                        <td>4 - 8</td>
+                    </tr>
+                    <tr>
+                        <th>Owner</th>
+                        <td>Bob</td>
+                    </tr>
+                    <tr>
+                        <th>Occupier</th>
+                        <td>Totally not Bob in disguise</td>
+                    </tr>
+                    <tr>
+                        <th>Borrowed on:</th>
+                        <td>17/10/2022</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 d-grid">
+            <a class="btn btn-primary text-start" data-bs-toggle="collapse" href="#game6" role="button"
+               aria-expanded="false"
+               aria-controls="game6">SOME OTHER GAME MORE BORING PROBABLY</a>
+            <div class="collapse" id="game6">
+                <table class="table">
+                    <tr>
+                        <th>Number of players</th>
+                        <td>4 - 8</td>
+                    </tr>
+                    <tr>
+                        <th>Owner</th>
+                        <td>Bob</td>
+                    </tr>
+                    <tr>
+                        <th>Occupier</th>
+                        <td>Totally not Bob in disguise</td>
+                    </tr>
+                    <tr>
+                        <th>Borrowed on:</th>
+                        <td>17/10/2022</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container d-none d-md-block ">
+    <div class="row">
+        <div class="col-md-6 col-lg-4 d-grid p-4">
+            <table class="table ">
+                <tr class="tableHead">
+                    <th colspan="2">MONOPOLY</th>
+                </tr>
+                <tr>
+                    <th>Number of players</th>
+                    <td>4 - 8</td>
+                </tr>
+                <tr>
+                    <th>Owner</th>
+                    <td>Bob</td>
+                </tr>
+                <tr>
+                    <th>Occupier</th>
+                    <td>Totally not Bob in disguise</td>
+                </tr>
+                <tr>
+                    <th>Borrowed on:</th>
+                    <td>17/10/2022</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-6 col-lg-4 d-grid p-4">
+            <table class="table">
+                <tr class="tableHead">
+                    <th colspan="2">SOME OTHER GAME MORE BORING PROBABLY</th>
+                </tr>
+                <tr>
+                    <th>Number of players</th>
+                    <td>4 - 8</td>
+                </tr>
+                <tr>
+                    <th>Owner</th>
+                    <td>Bob</td>
+                </tr>
+                <tr>
+                    <th>Occupier</th>
+                    <td>Totally not Bob in disguise</td>
+                </tr>
+                <tr>
+                    <th>Borrowed on:</th>
+                    <td>17/10/2022</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-6 col-lg-4 d-grid p-4">
+            <table class="table">
+                <tr class="tableHead">
+                    <th colspan="2">MONOPOLY</th>
+                </tr>
+                <tr>
+                    <th>Number of players</th>
+                    <td>4 - 8</td>
+                </tr>
+                <tr>
+                    <th>Owner</th>
+                    <td>Bob</td>
+                </tr>
+                <tr>
+                    <th>Occupier</th>
+                    <td>Totally not Bob in disguise</td>
+                </tr>
+                <tr>
+                    <th>Borrowed on:</th>
+                    <td>17/10/2022</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-6 col-lg-4 d-grid p-4">
+            <table class="table">
+                <tr class="tableHead">
+                    <th colspan="2">MONOPOLY</th>
+                </tr>
+                <tr>
+                    <th>Number of players</th>
+                    <td>4 - 8</td>
+                </tr>
+                <tr>
+                    <th>Owner</th>
+                    <td>Bob</td>
+                </tr>
+                <tr>
+                    <th>Occupier</th>
+                    <td>Totally not Bob in disguise</td>
+                </tr>
+                <tr>
+                    <th>Borrowed on:</th>
+                    <td>17/10/2022</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-6 col-lg-4 d-grid p-4">
+            <table class="table">
+                <tr class="tableHead">
+                    <th colspan="2">SOME OTHER GAME MORE BORING PROBABLY</th>
+                </tr>
+                <tr>
+                    <th>Number of players</th>
+                    <td>4 - 8</td>
+                </tr>
+                <tr>
+                    <th>Owner</th>
+                    <td>Bob</td>
+                </tr>
+                <tr>
+                    <th>Occupier</th>
+                    <td>Totally not Bob in disguise</td>
+                </tr>
+                <tr>
+                    <th>Borrowed on:</th>
+                    <td>17/10/2022</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-6 col-lg-4 d-grid p-4">
+            <table class="table">
+                <tr class="tableHead">
+                    <th colspan="2">MONOPOLY</th>
+                </tr>
+                <tr>
+                    <th>Number of players</th>
+                    <td>4 - 8</td>
+                </tr>
+                <tr>
+                    <th>Owner</th>
+                    <td>Bob</td>
+                </tr>
+                <tr>
+                    <th>Occupier</th>
+                    <td>Totally not Bob in disguise</td>
+                </tr>
+                <tr>
+                    <th>Borrowed on:</th>
+                    <td>17/10/2022</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
 <footer>
     <div id="footer" class="container-fluid border-top border-2 border-dark">
         <div class="row d-flex align-items-center h-auto pt-3 pb-2 border-bottom border-dark border-1">
@@ -78,9 +387,11 @@
             </div>
         </div>
         <div class="row h-auto">
-            <div class="col-12 d-flex justify-content-center pt-4 pb-3 "><p>&copy All rights reserved BestGroupEver.com
+            <div class="col-12 d-flex justify-content-center pt-4 pb-3 "><p>&copy All rights reserved
+                BestGroupEver.com
                 2022</p></div>
         </div>
     </div>
 </footer>
+</body>
 </html>
