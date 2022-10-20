@@ -13,3 +13,40 @@
 .centerText{
     text-align: center;
 }
+.big-purple-button{
+    border-radius: 20px;
+    padding: 10px 30px;
+}
+
+.content-small-text {
+    font-family: 'Exo 2', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    color: #564797;
+}
+h1{
+    margin-top:0;
+    padding-top: 0;
+    font-family: 'Exo 2', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 42px;
+    color: #000000;
+}
+.content-p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    color: #807978;
+    margin-bottom: 40px;
+}
+.description{
+    text-align: center;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+}
