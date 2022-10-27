@@ -48,3 +48,12 @@
     border-radius: 5px;
 
 }
+.card-footer{
+    background: white;
+    border-top: 0px;
+}
+.card-img-top{
+    object-fit: cover;
+    width: 100%;
+
+}
