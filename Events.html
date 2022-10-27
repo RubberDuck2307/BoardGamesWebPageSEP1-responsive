@@ -6,8 +6,8 @@
     <link href="css/page-style.css" rel="stylesheet" type="text/css">
     <link href="css/menu-custom.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link href="css/carousel.css" rel="stylesheet" type="text/css">
     <script src="js/bootstrap.bundle.js"></script>
+    <link href="css/carousel.css" rel="stylesheet" type="text/css">
     <!-- works better than  <script src="js/bootstrap.bundle.min.js"></script>-->
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <title>Events</title>
@@ -48,7 +48,7 @@
 <main>
     <div class="container my-5 px-sm-5 ">
         <div class="row align-items-center">
-            <div class="col mx-md-5 mx-3">
+            <div class="col-12 col-lg-5 mx-md-5 mx-3">
                 <span class="content-small-text">EVENTS</span>
                 <h1>We like to meet each other and play bord games the whole day. Become a member and do not miss any
                     event!</h1>
@@ -57,83 +57,55 @@
                     You can also decide, what games we will buy next.</p>
                 <a class="btn btn-primary big-purple-button" href="Contactus.html" role="button">Become a member</a>
             </div>
-            <div class="col d-none d-xl-grid">
-                <img src="images/events-main-picture.svg" alt="dice">
-            </div>
-        </div>
-        <div class="row align-items-center">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-4 d-flex justify-content-center align-items-center">
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                                class="active"
-                                aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                    </div>
+            <div class="col-12 col-lg-5 d-xl-grid mx-auto mt-5">
+                <!--carousel-->
+
+                <div id="carouselExampleControls" class="carousel slide align-items-center mx-auto mb-5" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <div class="eventCard">
-                                <div class="row mx-5">
-                                    <img class="px-0" src="images/chess.png" alt="Chess">
-                                </div>
-                                <div class="row mx-5">
-                                    <h1>Game Night at VIA</h1>
-                                    <h2>07/10/2022</h2>
-                                    <p>Everyone can join and play board games for free.</p>
-                                    <a href="https://www.facebook.com/viauniversitycollege/"><img
-                                            src="images/facebookLogo.png" alt="facebook logo"></a>
+                            <div class="card" style="width: auto">
+                                <img src="/images/chess.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="eventCard">
-                                <div class="row mx-5">
-                                    <img class="px-0" src="images/questionMark.png" alt="Question mark">
-                                </div>
-                                <div class="row mx-5">
-                                    <h1>Game Night at VIA</h1>
-                                    <h2>07/10/2022</h2>
-                                    <p>Everyone can join and play board games for free.</p>
-                                    <a href="https://www.facebook.com/viauniversitycollege/"><img
-                                            src="images/facebookLogo.png" alt="facebook logo"></a>
+                            <div class="card" style="width: auto">
+                                <img src="/images/chess.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="eventCard">
-                                <div class="row mx-5">
-                                    <img class="px-0" src="images/letsVote.png" alt="Vote">
+                            <div class="card" style="width: auto">
+                                <img src="/images/chess.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
                                 </div>
-                                <div class="row mx-5">
-                                    <h1>Game Night at VIA</h1>
-                                    <h2>07/10/2022</h2>
-                                    <p>Everyone can join and play board games for free.</p>
-                                    <a href="https://www.facebook.com/viauniversitycollege/"><img
-                                            src="images/facebookLogo.png" alt="facebook logo"></a>
-                                </div>
-
                             </div>
                         </div>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
-            <div class="col-sm-4"></div>
         </div>
     </div>
+
 </main>
 </body>
 
