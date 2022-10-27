@@ -1,4 +1,8 @@
 /* This selector targets all class names containing col- */
+*{
+    font-family: "Roboto Light", sans-serif;
+    color: black;
+}
 
 .carousel-control-prev, .carousel-control-next {
     background-color: black;
