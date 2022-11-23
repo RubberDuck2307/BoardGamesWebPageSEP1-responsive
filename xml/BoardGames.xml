@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PlayersList>
+  <BoardGame>
+    <ID>1</ID>
+    <name>Monopoly</name>
+    <type>Engine Building</type>
+    <numberOfPlayersMin>2</numberOfPlayersMin>
+    <numberOfPlayersMax>6</numberOfPlayersMax>
+    <availabilityStatus>Available</availabilityStatus>
+    <comment>dd</comment>
+    <ownerID>1</ownerID>
+    <numberOfVotes>4</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>2</ID>
+    <name>Amazing Game</name>
+    <type>Engine Building</type>
+    <numberOfPlayersMin>1</numberOfPlayersMin>
+    <numberOfPlayersMax>4</numberOfPlayersMax>
+    <availabilityStatus>Borrowed</availabilityStatus>
+    <comment>dd</comment>
+    <ownerID>2</ownerID>
+    <numberOfVotes>4</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>3</ID>
+    <name>Awesome Game</name>
+    <type>Engine Building</type>
+    <numberOfPlayersMin>4</numberOfPlayersMin>
+    <numberOfPlayersMax>4</numberOfPlayersMax>
+    <availabilityStatus>Borrowed</availabilityStatus>
+    <comment>dd</comment>
+    <ownerID>2</ownerID>
+    <numberOfVotes>4</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>4</ID>
+    <name>Very good Game</name>
+    <type>Engine Building</type>
+    <numberOfPlayersMin>4</numberOfPlayersMin>
+    <numberOfPlayersMax>4</numberOfPlayersMax>
+    <availabilityStatus>Available</availabilityStatus>
+    <comment>dd</comment>
+    <ownerID>0</ownerID>
+    <numberOfVotes>4</numberOfVotes>
+  </BoardGame>
+
+
+</PlayersList>
