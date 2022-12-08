@@ -58,3 +58,25 @@
     width: 100%;
 
 }
+
+.greenCircle{
+    background-color: green;
+    width: 15px;
+    height: 15px;
+}
+.redCircle{
+    background-color: red;
+    width: 15px;
+    height: 15px;
+}
+
+.yellowCircle{
+    background-color: yellow;
+    width: 15px;
+    height: 15px;
+}
+
+.star{
+    width: 15px;
+    height: 15px    ;
+}

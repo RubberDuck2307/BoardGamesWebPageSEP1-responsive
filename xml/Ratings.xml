@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<RatingsList>
+  <Rating>
+    <ID>0</ID>
+    <value>5</value>
+    <playerID>5</playerID>
+    <gameID>1</gameID>
+    <review>hello</review>
+  </Rating>
+  <Rating>
+    <ID>0</ID>
+    <value>5</value>
+    <playerID>5</playerID>
+    <gameID>4</gameID>
+    <review>hello</review>
+  </Rating>
+  <Rating>
+    <ID>0</ID>
+    <value>5</value>
+    <playerID>5</playerID>
+    <gameID>2</gameID>
+    <review>hello</review>
+  </Rating>
+  <Rating>
+    <ID>0</ID>
+    <value>5</value>
+    <playerID>5</playerID>
+    <gameID>3</gameID>
+    <review>hello</review>
+  </Rating>
+
+</RatingsList>

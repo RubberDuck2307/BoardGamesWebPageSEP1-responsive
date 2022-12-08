@@ -10,6 +10,8 @@
     <!-- works better than  <script src="js/bootstrap.bundle.min.js"></script>-->
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1/">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script type="module" src="js/catalogue.js"></script>
     <title>Catalogue</title>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#toc">
@@ -48,149 +50,67 @@
         <h1 class="text-center">Catalogue</h1>
         <p class="description">See what boardgames you can borrow.</p>
 
-        <!-- Since I am a stupid monkey and I don‘t know how to do it another way. I am creating 2 containers one for size smaller than medium and one for the rest - Jan Metela-->
-        <div class="container d-md-none mb-4">
+        <div class="container d-md-none mb-4" id = "electionSmall">
+            <h2 class="text-center"> Election </h2>
+            <p class = "description">There are ongoing election about a new board game</p>
+            <div class="row"> <!-- basic format which is used in javascript -->
+                <div class="col-12 d-grid">
+                    <a class="btn btn-primary text-start" data-bs-toggle="collapse" href="#CTBB1" role="button"
+                       aria-expanded="false"
+                       aria-controls="CTBB1">MONOPOLY
+                        <div class="rounded-circle greenCircle border border-light border-2 float-end"></div>
+                    </a>
+                    <div class="collapse" id="CTBB1">
+                        <table class="table">
+                            <tr>
+                                <th>Number of players</th>
+                                <td>4 - 8</td>
+                            </tr>
+                            <tr>
+                            <th>Genre</th>
+                            <td>Coop</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-none d-md-block mb-4" id="ElectionBig"> <!-- basic format which is used in javascript -->
+            <h2 class="text-center"> Election </h2>
+            <p class = "description">There are ongoing election about a new board game</p>
             <div class="row">
+                <div class="col-md-6 col-lg-4 d-grid p-4">
+                    <table class="table">
+                        <tr class="tableHead">
+                            <th colspan="2">MONOPOLY
+                                <div class=" rounded-circle border border-2 border-light greenCircle float-end"></div>
+                                <img src="images/star-vector-png-transparent-image-pngpix-21.png" class="star mb-1 me-1 float-end">
+                            </th>
+
+                        </tr>
+                        <tr>
+                            <th>Number of players</th>
+                            <td>4 - 8</td>
+                        <tr>
+                            <th>Genre</th>
+                            <td>Coop</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Since I am a stupid monkey and I don‘t know how to do it another way. I am creating 2 containers one for size smaller than medium and one for the rest - Jan Metela-->
+        <div class="container d-md-none mb-4" id="catalogueSmallTable">
+            <div class="row"> <!-- basic format which is used in javascript -->
                 <div class="col-12 d-grid">
                     <a class="btn btn-primary text-start" data-bs-toggle="collapse" href="#game1" role="button"
                        aria-expanded="false"
-                       aria-controls="game1"> MONOPOLY</a>
+                       aria-controls="game1">MONOPOLY
+                        <div class="rounded-circle greenCircle border border-light border-2 float-end"></div>
+                    </a>
                     <div class="collapse" id="game1">
-                        <table class="table">
-                            <tr>
-                                <th>Number of players</th>
-                                <td>4 - 8</td>
-                            </tr>
-                            <tr>
-                                <th>Owner</th>
-                                <td>Bob</td>
-                            </tr>
-                            <tr>
-                                <th>Occupier</th>
-                                <td>Totally not Bob in disguise</td>
-                            </tr>
-                            <tr>
-                                <th>Borrowed on:</th>
-                                <td>17/10/2022</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 d-grid">
-                    <a class="btn btn-primary text-start" data-bs-toggle="collapse" href="#game2" role="button"
-                       aria-expanded="false"
-                       aria-controls="game2">SOME OTHER GAME MORE BORING PROBABLY</a>
-                    <div class="collapse" id="game2">
-                        <table class="table">
-                            <tr>
-                                <th>Number of players</th>
-                                <td>4 - 8</td>
-                            </tr>
-                            <tr>
-                                <th>Owner</th>
-                                <td>Bob</td>
-                            </tr>
-                            <tr>
-                                <th>Occupier</th>
-                                <td>Totally not Bob in disguise</td>
-                            </tr>
-                            <tr>
-                                <th>Borrowed on:</th>
-                                <td>17/10/2022</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="row ">
-                <div class="col-12 d-grid">
-                    <a class="btn btn-primary text-start" data-bs-toggle="collapse" href="#game3" role="button"
-                       aria-expanded="false"
-                       aria-controls="game3"> MONOPOLY</a>
-                    <div class="collapse" id="game3">
-                        <table class="table">
-                            <tr>
-                                <th>Number of players</th>
-                                <td>4 - 8</td>
-                            </tr>
-                            <tr>
-                                <th>Owner</th>
-                                <td>Bob</td>
-                            </tr>
-                            <tr>
-                                <th>Occupier</th>
-                                <td>Totally not Bob in disguise</td>
-                            </tr>
-                            <tr>
-                                <th>Borrowed on:</th>
-                                <td>17/10/2022</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 d-grid">
-                    <a class="btn btn-primary text-start" data-bs-toggle="collapse" href="#game4" role="button"
-                       aria-expanded="false"
-                       aria-controls="game4">SOME OTHER GAME MORE BORING PROBABLY</a>
-                    <div class="collapse" id="game4">
-                        <table class="table">
-                            <tr>
-                                <th>Number of players</th>
-                                <td>4 - 8</td>
-                            </tr>
-                            <tr>
-                                <th>Owner</th>
-                                <td>Bob</td>
-                            </tr>
-                            <tr>
-                                <th>Occupier</th>
-                                <td>Totally not Bob in disguise</td>
-                            </tr>
-                            <tr>
-                                <th>Borrowed on:</th>
-                                <td>17/10/2022</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="row ">
-                <div class="col-12 d-grid">
-                    <a class="btn btn-primary text-start" data-bs-toggle="collapse" href="#game5" role="button"
-                       aria-expanded="false"
-                       aria-controls="game5"> MONOPOLY</a>
-                    <div class="collapse" id="game5">
-                        <table class="table">
-                            <tr>
-                                <th>Number of players</th>
-                                <td>4 - 8</td>
-                            </tr>
-                            <tr>
-                                <th>Owner</th>
-                                <td>Bob</td>
-                            </tr>
-                            <tr>
-                                <th>Occupier</th>
-                                <td>Totally not Bob in disguise</td>
-                            </tr>
-                            <tr>
-                                <th>Borrowed on:</th>
-                                <td>17/10/2022</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 d-grid">
-                    <a class="btn btn-primary text-start" data-bs-toggle="collapse" href="#game6" role="button"
-                       aria-expanded="false"
-                       aria-controls="game6">SOME OTHER GAME MORE BORING PROBABLY</a>
-                    <div class="collapse" id="game6">
                         <table class="table">
                             <tr>
                                 <th>Number of players</th>
@@ -214,127 +134,17 @@
             </div>
         </div>
 
-        <div class="container d-none d-md-block mb-4">
+
+        <div class="container d-none d-md-block mb-4" id="catalogueBigTable"> <!-- basic format which is used in javascript -->
             <div class="row">
                 <div class="col-md-6 col-lg-4 d-grid p-4">
-                    <table class="table ">
-                        <tr class="tableHead">
-                            <th colspan="2">MONOPOLY</th>
-                        </tr>
-                        <tr>
-                            <th>Number of players</th>
-                            <td>4 - 8</td>
-                        </tr>
-                        <tr>
-                            <th>Owner</th>
-                            <td>Bob</td>
-                        </tr>
-                        <tr>
-                            <th>Occupier</th>
-                            <td>Totally not Bob in disguise</td>
-                        </tr>
-                        <tr>
-                            <th>Borrowed on:</th>
-                            <td>17/10/2022</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="col-md-6 col-lg-4 d-grid p-4">
                     <table class="table">
                         <tr class="tableHead">
-                            <th colspan="2">SOME OTHER GAME MORE BORING PROBABLY</th>
-                        </tr>
-                        <tr>
-                            <th>Number of players</th>
-                            <td>4 - 8</td>
-                        </tr>
-                        <tr>
-                            <th>Owner</th>
-                            <td>Bob</td>
-                        </tr>
-                        <tr>
-                            <th>Occupier</th>
-                            <td>Totally not Bob in disguise</td>
-                        </tr>
-                        <tr>
-                            <th>Borrowed on:</th>
-                            <td>17/10/2022</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="col-md-6 col-lg-4 d-grid p-4">
-                    <table class="table">
-                        <tr class="tableHead">
-                            <th colspan="2">MONOPOLY</th>
-                        </tr>
-                        <tr>
-                            <th>Number of players</th>
-                            <td>4 - 8</td>
-                        </tr>
-                        <tr>
-                            <th>Owner</th>
-                            <td>Bob</td>
-                        </tr>
-                        <tr>
-                            <th>Occupier</th>
-                            <td>Totally not Bob in disguise</td>
-                        </tr>
-                        <tr>
-                            <th>Borrowed on:</th>
-                            <td>17/10/2022</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="col-md-6 col-lg-4 d-grid p-4">
-                    <table class="table">
-                        <tr class="tableHead">
-                            <th colspan="2">MONOPOLY</th>
-                        </tr>
-                        <tr>
-                            <th>Number of players</th>
-                            <td>4 - 8</td>
-                        </tr>
-                        <tr>
-                            <th>Owner</th>
-                            <td>Bob</td>
-                        </tr>
-                        <tr>
-                            <th>Occupier</th>
-                            <td>Totally not Bob in disguise</td>
-                        </tr>
-                        <tr>
-                            <th>Borrowed on:</th>
-                            <td>17/10/2022</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="col-md-6 col-lg-4 d-grid p-4">
-                    <table class="table">
-                        <tr class="tableHead">
-                            <th colspan="2">SOME OTHER GAME MORE BORING PROBABLY</th>
-                        </tr>
-                        <tr>
-                            <th>Number of players</th>
-                            <td>4 - 8</td>
-                        </tr>
-                        <tr>
-                            <th>Owner</th>
-                            <td>Bob</td>
-                        </tr>
-                        <tr>
-                            <th>Occupier</th>
-                            <td>Totally not Bob in disguise</td>
-                        </tr>
-                        <tr>
-                            <th>Borrowed on:</th>
-                            <td>17/10/2022</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="col-md-6 col-lg-4 d-grid p-4">
-                    <table class="table">
-                        <tr class="tableHead">
-                            <th colspan="2">MONOPOLY</th>
+                            <th colspan="2">MONOPOLY
+                                <div class=" rounded-circle border border-2 border-light greenCircle float-end"></div>
+                                <img src="images/star-vector-png-transparent-image-pngpix-21.png" class="star mb-1 me-1 float-end">
+                            </th>
+
                         </tr>
                         <tr>
                             <th>Number of players</th>
@@ -356,6 +166,37 @@
                 </div>
             </div>
         </div>
+
+        <div class="container mb-4" id=reservationTable> <!-- basic format which is used in javascript -->
+            <div class="row">
+                <div class="col-lg-6 d-grid offset-lg-3 col-md-8 offset-md-2">
+                    <a class="btn btn-primary text-start" data-bs-toggle="collapse" href="#reservation0" role="button"
+                       aria-expanded="false"
+                       aria-controls="game1">MONOPOLY
+                    </a>
+                    <div class="collapse" id="reservation0">
+                        <table class="table">
+                            <thead>
+                            <th>Borrower</th>
+                            <th>From</th>
+                            <th>To</th>
+                            </thead>
+                            <tr>
+                                <td>Alex</td>
+                                <td>20/3/2003</td>
+                                <td>48/4/6461</td>
+                            </tr>
+                            <tr>
+                                <td>Alex</td>
+                                <td>20/3/2003</td>
+                                <td>48/4/6461</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer>    <!-- Jan Metela -->

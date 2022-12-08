@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<EventsList>
+  <Event>
+    <ID>0</ID>
+    <name>Chess Night</name>
+    <location>Palace</location>
+    <startingDate>
+      <day>3</day>
+      <month>2</month>
+      <year>2003</year>
+      <hour>5</hour>
+      <minute>12</minute>
+    </startingDate>
+    <endingDate>
+      <day>6</day>
+      <month>2</month>
+      <year>2023</year>
+      <hour>5</hour>
+      <minute>12</minute>
+    </endingDate>
+    <description>lalallal</description>
+    <playersIDs/>
+    <comment>haha</comment>
+    <link>hhh</link>
+  </Event>
+  <Event>
+    <ID>0</ID>
+    <name>Chess LOLOL Night</name>
+    <location>Palace</location>
+    <startingDate>
+      <day>6</day>
+      <month>2</month>
+      <year>2023</year>
+      <hour>5</hour>
+      <minute>12</minute>
+    </startingDate>
+    <endingDate>
+      <day>6</day>
+      <month>2</month>
+      <year>2023</year>
+      <hour>5</hour>
+      <minute>12</minute>
+    </endingDate>
+    <description>lalallal</description>
+    <playersIDs/>
+    <comment>haha</comment>
+    <link>hhh</link>
+  </Event>
+</EventsList>

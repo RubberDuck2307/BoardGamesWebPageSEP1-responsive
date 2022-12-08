@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<borrowingsList>
+  <Borrowing>
+    <ID>0</ID>
+    <playerID>1</playerID>
+    <gameID>2</gameID>
+    <from>
+      <day>24</day>
+      <month>3</month>
+      <year>2003</year>
+    </from>
+    <to>
+      <day>24</day>
+      <month>11</month>
+      <year>2021</year>
+    </to>
+    <comment>s</comment>
+  </Borrowing>
+  <Borrowing>
+    <ID>3</ID>
+    <playerID>2</playerID>
+    <gameID>4</gameID>
+    <from>
+      <day>24</day>
+      <month>3</month>
+      <year>2003</year>
+    </from>
+    <to>
+      <day>24</day>
+      <month>3</month>
+      <year>2003</year>
+    </to>
+    <comment>s</comment>
+  </Borrowing>
+</borrowingsList>

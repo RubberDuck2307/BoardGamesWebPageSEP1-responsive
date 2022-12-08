@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PlayersList>
+  <Player>
+    <ID>1</ID>
+    <name>Anna</name>
+    <phoneNumber>25</phoneNumber>
+    <email>Hello</email>
+    <membership>true</membership>
+    <ownedBoardGamesIDs>
+      <ID>2</ID>
+      <ID>4</ID>
+    </ownedBoardGamesIDs>
+    <borrowingsIDs>
+      <ID>0</ID>
+      <ID>3</ID>
+    </borrowingsIDs>
+    <comment>xxd</comment>
+    <address>xaxax</address>
+    <voted>true</voted>
+  </Player>
+  <Player>
+    <ID>2</ID>
+    <name>Alex</name>
+    <phoneNumber>56</phoneNumber>
+    <email/>
+    <membership>true</membership>
+    <ownedBoardGamesIDs/>
+    <borrowingsIDs/>
+    <comment/>
+    <address/>
+    <voted>false</voted>
+  </Player>
+</PlayersList>
