@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Election>
-  <startingDate>
-    <day>3</day>
-    <month>12</month>
-    <year>2002</year>
-    <hour>15</hour>
-    <minute>22</minute>
-  </startingDate>
-  <endingDate>
-    <day>3</day>
-    <month>12</month>
-    <year>2002</year>
-    <hour>15</hour>
-    <minute>22</minute>
-  </endingDate>
+    <startingDate>
+        <day>9</day>
+        <month>12</month>
+        <year>2022</year>
+    </startingDate>
+    <endingDate>
+        <day>10</day>
+        <month>12</month>
+        <year>2022</year>
+    </endingDate>
 </Election>

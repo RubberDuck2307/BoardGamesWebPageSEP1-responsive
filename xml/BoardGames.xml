@@ -39,7 +39,7 @@
     <type>Engine Building</type>
     <numberOfPlayersMin>4</numberOfPlayersMin>
     <numberOfPlayersMax>4</numberOfPlayersMax>
-    <availabilityStatus>Available</availabilityStatus>
+    <availabilityStatus>Considered to be bought</availabilityStatus>
     <comment>dd</comment>
     <ownerID>0</ownerID>
     <numberOfVotes>4</numberOfVotes>

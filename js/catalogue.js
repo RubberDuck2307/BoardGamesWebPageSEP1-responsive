@@ -12,9 +12,11 @@ async function getBoardGames() {
         boardGame["availabilityStatus"] = $(this).find("availabilityStatus").text()
         boardGame["ownerID"] = $(this).find("ownerID").text()
         boardGame["numberOfVotes"] = $(this).find("numberOfVotes").text()
+        boardGame["rating"] = 0
+        boardGame["amountOfRatings"] = 0
         BoardGamesList.push(boardGame)
     })
-    console.log(BoardGamesList.length)
+
     return BoardGamesList
 }
 
@@ -29,7 +31,6 @@ async function getPlayers() {
         player["name"] = $(this).find("name").text()
         playersList.push(player)
     })
-    console.log(playersList)
     return playersList
 }
 
@@ -50,7 +51,23 @@ async function getCurrentBorrowings() {
     return borrowingsList
 }
 
-console.log(await getCurrentBorrowings())
+async function getElection() {
+    let xml = await $.get("xml/Election.xml")
+    let election = $(xml).find("Election")
+    if ($(xml).find("startingDate").length == 0) {
+        return null
+    } else {
+        let electionObject = new Object()
+        electionObject["startingDay"] = $($(election[0]).find("startingDate")).find("day").text()
+        electionObject["startingMonth"] = $($(election[0]).find("startingDate")).find("month").text()
+        electionObject["startingYear"] = $($(election[0]).find("startingDate")).find("year").text()
+        electionObject["endingDay"] = $($(election[0]).find("endingDate")).find("day").text()
+        electionObject["endingMonth"] = $($(election[0]).find("endingDate")).find("month").text()
+        electionObject["endingYear"] = $($(election[0]).find("endingDate")).find("year").text()
+        return electionObject
+    }
+}
+
 
 async function getReservation() {
     let xml = await $.get("xml/Reservations.xml")
@@ -72,9 +89,32 @@ async function getReservation() {
     return reservationsList
 }
 
+async function calculateRatings() {
+    let xml = await $.get("xml/Ratings.xml")
+    let ratings = $(xml).find("Rating")
+    const highRatedGames = []
+    $(ratings).each(function () {
+        for (let i = 0; i < boardGames.length; i++) {
+            if ($(this).find("gameID").text() == boardGames[i].ID) {
+                boardGames[i]["rating"] += parseInt($(this).find("value").text())
+                boardGames[i]["amountOfRatings"] += 1
+            }
+        }
+
+    })
+    for (let i = 0; i < boardGames.length; i++) {
+        boardGames[i]["averageRating"] = parseInt(boardGames[i].rating) / parseInt(boardGames[i].amountOfRatings)
+        if (boardGames[i]["averageRating"] >= 4 && boardGames[i].availabilityStatus == "Available") {
+            highRatedGames.push(boardGames[i])
+        }
+    }
+    return highRatedGames
+}
+
 
 let reservations = await getReservation()
 let boardGames = await getBoardGames()
+await calculateRatings()
 let players = await getPlayers()
 let borrowings = await getCurrentBorrowings()
 
@@ -82,7 +122,144 @@ let borrowings = await getCurrentBorrowings()
 let textSmallTable = ""
 let textBigTable = "<div class=\"row\">\n"
 
+let highRatedGames = await calculateRatings()
+if (highRatedGames.length < 4) {
+    for (let i = 0; i < highRatedGames.length; i++) {
+        let owner
+        if (highRatedGames[i].ownerID == 0) {
+            owner = "Association"
+        } else {
+            for (let j = 0; j < players.length; j++) {
+                if (highRatedGames[i].ownerID == players[j].ID) {
+                    owner = players[j].name
+                    break
+                }
+            }
+        }
 
+        textSmallTable += " <div class=\"row\">\n" +
+            "                <div class=\"col-12 d-grid\">\n" +
+            "                    <a class=\"btn btn-primary text-start\" data-bs-toggle=\"collapse\" href=\"#game" + i + "\" role=\"button\"\n" +
+            "                       aria-expanded=\"false\"\n" +
+            "                       aria-controls=\"game" + i + "\">" + highRatedGames[i]["name"] + " <img src=\"images/star-vector-png-transparent-image-pngpix-21.png\" class=\"star mb-1 me-1 float-end\" alt= \"star\"> </a>\n" +
+            "                    <div class=\"collapse\" id=\"game" + i + "\">\n" +
+            "                        <table class=\"table\">\n" +
+            "                            <tr>\n" +
+            "                                <th>Number of players</th>\n" +
+            "                                <td>" + highRatedGames[i]["numberOfPlayersMin"] + " - " + highRatedGames[i].numberOfPlayersMax + "</td>\n" +
+            "                            </tr>\n" +
+            "                            <tr>\n" +
+            "                                <th>Genre</th>\n" +
+            "                                <td>" + highRatedGames[i].type + "</td>\n" +
+            "                            </tr>\n" +
+            "                            <tr>\n" +
+            "                                <th>Owner</th>\n" +
+            "                                <td>" + owner + "</td>\n" +
+            "                            </tr>\n" +
+            "                        </table>\n" +
+            "                    </div>\n" +
+            "                </div>\n" +
+            "            </div>"
+
+
+        textBigTable +=
+            "                <div class=\"col-md-6 col-lg-4 d-grid p-4\">\n" +
+            "                    <table class=\"table \">\n" +
+            "                        <thead class=\"tableHead\">\n" +
+            "                            <th colspan=\"2\" class=\"align-items-center\">" + highRatedGames[i].name + "\n" +
+            "                                <img src=\"images/star-vector-png-transparent-image-pngpix-21.png\" class=\"star mb-1 me-1 float-end\"></th>" +
+            "                        </thead>\n" +
+            "                        <tr >\n" +
+            "                                <th>Number of players</th>\n" +
+            "                                <td>" + highRatedGames[i]["numberOfPlayersMin"] + " - " + highRatedGames[i].numberOfPlayersMax + "</td>\n" +
+            "                            </tr>\n" +
+            "                            <tr>\n" +
+            "                                <th>Genre</th>\n" +
+            "                                <td>" + highRatedGames[i].type + "</td>\n" +
+            "                            </tr>\n" +
+            "                            <tr>\n" +
+            "                                <th>Owner</th>\n" +
+            "                                <td>" + owner + "</td>\n" +
+            "                            </tr>\n" +
+            "                        </table>\n" +
+            "                    </div>\n"
+    }
+} else {
+    const randoms = []
+    let index = 0
+    for (; randoms.length < 3;) {
+        let random = Math.floor(Math.random() * highRatedGames.length)
+        if (!randoms.includes(random)) {
+            randoms.push(random)
+        }
+    }
+    randoms.forEach(function (int) {
+        let boardGame = highRatedGames[int]
+
+
+        let owner
+        if (boardGame.ownerID == 0) {
+            owner = "Association"
+        } else {
+            for (let j = 0; j < players.length; j++) {
+                if (boardGame.ownerID == players[j].ID) {
+                    owner = players[j].name
+                    break
+                }
+            }
+        }
+
+        textSmallTable += " <div class=\"row\">\n" +
+            "                <div class=\"col-12 d-grid\">\n" +
+            "                    <a class=\"btn btn-primary text-start\" data-bs-toggle=\"collapse\" href=\"#game" + index + "\" role=\"button\"\n" +
+            "                       aria-expanded=\"false\"\n" +
+            "                       aria-controls=\"game" + index + "\">" + boardGame["name"] + "<img src=\"images/star-vector-png-transparent-image-pngpix-21.png\" class=\"star mb-1 me-1 float-end\"></a>\n" +
+            "                    <div class=\"collapse\" id=\"game" + index + "\">\n" +
+            "                        <table class=\"table\">\n" +
+            "                            <tr>\n" +
+            "                                <th>Number of players</th>\n" +
+            "                                <td>" + boardGame["numberOfPlayersMin"] + " - " + boardGame.numberOfPlayersMax + "</td>\n" +
+            "                            </tr>\n" +
+            "                            <tr>\n" +
+            "                                <th>Genre</th>\n" +
+            "                                <td>" + boardGame.type + "</td>\n" +
+            "                            </tr>\n" +
+            "                            <tr>\n" +
+            "                                <th>Owner</th>\n" +
+            "                                <td>" + owner + "</td>\n" +
+            "                            </tr>\n" +
+            "                        </table>\n" +
+            "                    </div>\n" +
+            "                </div>\n" +
+            "            </div>"
+
+
+        textBigTable +=
+            "                <div class=\"col-md-6 col-lg-4 d-grid p-4\">\n" +
+            "                    <table class=\"table \">\n" +
+            "                        <thead class=\"tableHead\">\n" +
+            "                            <th colspan=\"2\" class=\"align-items-center\">" + boardGame.name + "\n" +
+            "                                <img src=\"images/star-vector-png-transparent-image-pngpix-21.png\" class=\"star mb-1 me-1 float-end\"></th>" +
+            "                        </thead>\n" +
+            "                        <tr >\n" +
+            "                                <th>Number of players</th>\n" +
+            "                                <td>" + boardGame["numberOfPlayersMin"] + " - " + boardGame.numberOfPlayersMax + "</td>\n" +
+            "                            </tr>\n" +
+            "                            <tr>\n" +
+            "                                <th>Genre</th>\n" +
+            "                                <td>" + boardGame.type + "</td>\n" +
+            "                            </tr>\n" +
+            "                            <tr>\n" +
+            "                                <th>Owner</th>\n" +
+            "                                <td>" + owner + "</td>\n" +
+            "                            </tr>\n" +
+            "                        </table>\n" +
+            "                    </div>\n"
+        index += 1
+    })
+}
+
+let index = 3
 for (let i = 0; i < boardGames.length; i++) {
 
     let availability = ""
@@ -109,8 +286,6 @@ for (let i = 0; i < boardGames.length; i++) {
         } else {
             availability = " greenCircle "
             for (let j = 0; j < reservations.length; j++) {
-                console.log("PAPX")
-                console.log(reservations[j].gameID)
                 if (reservations[j].gameID == boardGames[i].ID) {
                     availability = " yellowCircle "
                     break
@@ -132,10 +307,10 @@ for (let i = 0; i < boardGames.length; i++) {
 
         textSmallTable += " <div class=\"row\">\n" +
             "                <div class=\"col-12 d-grid\">\n" +
-            "                    <a class=\"btn btn-primary text-start\" data-bs-toggle=\"collapse\" href=\"#game" + i + "\" role=\"button\"\n" +
+            "                    <a class=\"btn btn-primary text-start\" data-bs-toggle=\"collapse\" href=\"#game" + index + "\" role=\"button\"\n" +
             "                       aria-expanded=\"false\"\n" +
-            "                       aria-controls=\"game" + i + "\">" + boardGames[i]["name"] + " <div class=\"rounded-circle" + availability + "border border-light border-2 float-end\"></div></a>\n" +
-            "                    <div class=\"collapse\" id=\"game" + i + "\">\n" +
+            "                       aria-controls=\"game" + index + "\">" + boardGames[i]["name"] + " <div class=\"rounded-circle" + availability + "border border-light border-2 float-end\"></div></a>\n" +
+            "                    <div class=\"collapse\" id=\"game" + index + "\">\n" +
             "                        <table class=\"table\">\n" +
             "                            <tr>\n" +
             "                                <th>Number of players</th>\n" +
@@ -210,14 +385,17 @@ for (let i = 0; i < boardGames.length; i++) {
         textBigTable +=
             "                        </table>\n" +
             "                    </div>\n"
+
+        index += 1
     }
 }
 textSmallTable += "</div> </div> </div> "
 textBigTable += "</div>"
 $("#catalogueSmallTable").html(textSmallTable)
 $("#catalogueBigTable").html(textBigTable)
-
 let reservationTableText = "<div class=\"row\">"
+
+
 for (let i = 0; i < boardGames.length; i++) {
     let size = 0;
     for (let j = 0; j < reservations.length; j++) {
@@ -263,6 +441,69 @@ for (let i = 0; i < boardGames.length; i++) {
 reservationTableText += "            </div>\n" +
     "        </div>\n"
 $("#reservationTable").html(reservationTableText)
+
+
+let textElectionBig = ""
+let textElectionSmall = ""
+
+let election = await getElection()
+console.log(election)
+if (election != null) {
+    textElectionBig += "        <h2 class=\"text-center\"> Election </h2>\n" +
+        "                       <p class = \"description\">There are ongoing election about a new board game till  " + election.endingDay +"/" + election.endingMonth +"/" + election.endingYear + "</p> " +
+        "                       <p class='description'>You can vote for these games:</p>"      +
+        "                       <div class=\"row\">"
+    textElectionSmall += "  <h2 class=\"text-center\"> Election </h2>\n" +
+        "                   <p class = \"description\">There are ongoing election about a new board game till "+ election.endingDay +"/" + election.endingMonth +"/" + election.endingYear + "</p>" +
+        "                   <p class='description'>You can vote for these games:</p>\  <div class=\"row\">"
+    for (let i = 0; i < boardGames.length; i++) {
+        if (boardGames[i].availabilityStatus == "Considered to be bought") {
+            textElectionBig +=
+                " <div class=\"col-md-6 col-lg-4 d-grid p-4\">\n" +
+                "                    <table class=\"table\">\n" +
+                "                        <tr class=\"tableHead\">\n" +
+                "                            <th colspan=\"2\">" + boardGames[i].name +
+                "                            </th>\n" +
+                "\n" +
+                "                        </tr>\n" +
+                "                        <tr>\n" +
+                "                            <th>Number of players</th>\n" +
+                "                            <td>" + boardGames[i].numberOfPlayersMin + "-" + boardGames[i].numberOfPlayersMax + "</td>\n" +
+                "                        <tr>\n" +
+                "                            <th>Genre</th>\n" +
+                "                            <td>" + boardGames[i].type + "</td>\n" +
+                "                        </tr>"
+
+            textElectionSmall += "<div class=\"col-12 d-grid\">\n" +
+                "                    <a class=\"btn btn-primary text-start\" data-bs-toggle=\"collapse\" href=\"#CTBB1\" role=\"button\"\n" +
+                "                       aria-expanded=\"false\"\n" +
+                "                       aria-controls=\"CTBB1\">"+ boardGames[i].name +"\n" +
+                "                    </a>\n" +
+                "                    <div class=\"collapse\" id=\"CTBB1\">\n" +
+                "                        <table class=\"table\">\n" +
+                "                            <tr>\n" +
+                "                                <th>Number of players</th>\n" +
+                "                                <td>" + boardGames[i].numberOfPlayersMin + "-" + boardGames[i].numberOfPlayersMax + "</td>\n" +
+                "                            </tr>\n" +
+                "                            <tr>\n" +
+                "                            <th>Genre</th>\n" +
+                "                            <td>" + boardGames[i].type + "</td>\n" +
+                "                            </tr>\n" +
+                "                        </table>\n" +
+                "                    </div> "
+        }
+    }
+    textElectionBig += "                    </table>\n" +
+        "                </div>\n" +
+        "            </div>\n" +
+        "        </div>"
+    textElectionSmall += "                </div>\n" +
+        "            </div>\n" +
+        "        </div>"
+}
+console.log(textElectionBig)
+$("#ElectionBig").html(textElectionBig)
+$("#electionSmall").html(textElectionSmall)
 
 
 

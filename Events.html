@@ -10,6 +10,8 @@
     <link href="css/carousel.css" rel="stylesheet" type="text/css">
     <!-- works better than  <script src="js/bootstrap.bundle.min.js"></script>-->
     <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script type="module" src="js/events.js"></script>
     <title>Events</title>
     <meta name="viewport" content="width=device-width, initial-scale=1/">
 
@@ -63,7 +65,7 @@
                 <!--Carousel Alexandro-->
 
                 <div id="carouselExampleControls" class="carousel slide align-items-center mx-auto mb-5" data-bs-ride="carousel" style="width: 30rem">
-                    <div class="carousel-inner">
+                    <div class="carousel-inner" id="carousel">
                         <div class="carousel-item active">
                             <div class="card" style="width: auto">
                                 <img src="images/chess.png" class="card-img-top" alt="Chess">

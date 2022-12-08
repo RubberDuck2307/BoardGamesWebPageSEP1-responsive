@@ -50,6 +50,57 @@
         <h1 class="text-center">Catalogue</h1>
         <p class="description">See what boardgames you can borrow.</p>
 
+        <div class="container d-md-none mb-4" id = "electionSmall">
+            <h2 class="text-center"> Election </h2>
+            <p class = "description">There are ongoing election about a new board game</p>
+            <div class="row"> <!-- basic format which is used in javascript -->
+                <div class="col-12 d-grid">
+                    <a class="btn btn-primary text-start" data-bs-toggle="collapse" href="#CTBB1" role="button"
+                       aria-expanded="false"
+                       aria-controls="CTBB1">MONOPOLY
+                        <div class="rounded-circle greenCircle border border-light border-2 float-end"></div>
+                    </a>
+                    <div class="collapse" id="CTBB1">
+                        <table class="table">
+                            <tr>
+                                <th>Number of players</th>
+                                <td>4 - 8</td>
+                            </tr>
+                            <tr>
+                            <th>Genre</th>
+                            <td>Coop</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-none d-md-block mb-4" id="ElectionBig"> <!-- basic format which is used in javascript -->
+            <h2 class="text-center"> Election </h2>
+            <p class = "description">There are ongoing election about a new board game</p>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 d-grid p-4">
+                    <table class="table">
+                        <tr class="tableHead">
+                            <th colspan="2">MONOPOLY
+                                <div class=" rounded-circle border border-2 border-light greenCircle float-end"></div>
+                                <img src="images/star-vector-png-transparent-image-pngpix-21.png" class="star mb-1 me-1 float-end">
+                            </th>
+
+                        </tr>
+                        <tr>
+                            <th>Number of players</th>
+                            <td>4 - 8</td>
+                        <tr>
+                            <th>Genre</th>
+                            <td>Coop</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
         <!-- Since I am a stupid monkey and I don‘t know how to do it another way. I am creating 2 containers one for size smaller than medium and one for the rest - Jan Metela-->
         <div class="container d-md-none mb-4" id="catalogueSmallTable">
             <div class="row"> <!-- basic format which is used in javascript -->
@@ -89,8 +140,9 @@
                 <div class="col-md-6 col-lg-4 d-grid p-4">
                     <table class="table">
                         <tr class="tableHead">
-                            <th colspan="2" class="align-items-center">MONOPOLY
+                            <th colspan="2">MONOPOLY
                                 <div class=" rounded-circle border border-2 border-light greenCircle float-end"></div>
+                                <img src="images/star-vector-png-transparent-image-pngpix-21.png" class="star mb-1 me-1 float-end">
                             </th>
 
                         </tr>
