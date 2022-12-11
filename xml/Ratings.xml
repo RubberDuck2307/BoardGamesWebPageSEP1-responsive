@@ -1,32 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <RatingsList>
   <Rating>
-    <ID>0</ID>
+    <ID>5</ID>
     <value>5</value>
-    <playerID>5</playerID>
+    <playerID>2</playerID>
+    <gameID>0</gameID>
+  </Rating>
+  <Rating>
+    <ID>6</ID>
+    <value>5</value>
+    <playerID>2</playerID>
     <gameID>1</gameID>
-    <review>hello</review>
   </Rating>
   <Rating>
-    <ID>0</ID>
+    <ID>7</ID>
     <value>5</value>
-    <playerID>5</playerID>
-    <gameID>4</gameID>
-    <review>hello</review>
+    <playerID>4</playerID>
+    <gameID>5</gameID>
   </Rating>
   <Rating>
-    <ID>0</ID>
+    <ID>8</ID>
     <value>5</value>
-    <playerID>5</playerID>
-    <gameID>2</gameID>
-    <review>hello</review>
+    <playerID>6</playerID>
+    <gameID>10</gameID>
   </Rating>
   <Rating>
-    <ID>0</ID>
+    <ID>9</ID>
     <value>5</value>
-    <playerID>5</playerID>
-    <gameID>3</gameID>
-    <review>hello</review>
+    <playerID>3</playerID>
+    <gameID>9</gameID>
   </Rating>
-
+  <Rating>
+    <ID>10</ID>
+    <value>5</value>
+    <playerID>2</playerID>
+    <gameID>16</gameID>
+  </Rating>
 </RatingsList>

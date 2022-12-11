@@ -1,33 +1,83 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <PlayersList>
   <Player>
-    <ID>1</ID>
-    <name>Anna</name>
-    <phoneNumber>25</phoneNumber>
-    <email>Hello</email>
-    <membership>true</membership>
-    <ownedBoardGamesIDs>
-      <ID>2</ID>
-      <ID>4</ID>
-    </ownedBoardGamesIDs>
-    <borrowingsIDs>
-      <ID>0</ID>
-      <ID>3</ID>
-    </borrowingsIDs>
-    <comment>xxd</comment>
-    <address>xaxax</address>
-    <voted>true</voted>
-  </Player>
-  <Player>
     <ID>2</ID>
-    <name>Alex</name>
-    <phoneNumber>56</phoneNumber>
-    <email/>
+    <name>Frodo Baggins</name>
+    <phoneNumber>54086954</phoneNumber>
+    <email>hobbiton@ring.cz</email>
     <membership>true</membership>
-    <ownedBoardGamesIDs/>
-    <borrowingsIDs/>
     <comment/>
     <address/>
     <voted>false</voted>
+  </Player>
+  <Player>
+    <ID>3</ID>
+    <name>Gandal the grey</name>
+    <phoneNumber>+80223548</phoneNumber>
+    <email/>
+    <membership>true</membership>
+    <comment>He likes spells</comment>
+    <address>Middle-Earth</address>
+    <voted>false</voted>
+    <feePayment>
+      <day>12</day>
+      <month>12</month>
+      <year>2022</year>
+    </feePayment>
+  </Player>
+  <Player>
+    <ID>4</ID>
+    <name>Saruman the White</name>
+    <phoneNumber>+980483546</phoneNumber>
+    <email>white@tower.me</email>
+    <membership>true</membership>
+    <comment>He is always returning games late</comment>
+    <address/>
+    <voted>false</voted>
+  </Player>
+  <Player>
+    <ID>5</ID>
+    <name>Samwise Gange</name>
+    <phoneNumber>45558236</phoneNumber>
+    <email/>
+    <membership>false</membership>
+    <comment/>
+    <address/>
+    <voted>false</voted>
+  </Player>
+  <Player>
+    <ID>6</ID>
+    <name>Elrond</name>
+    <phoneNumber>22</phoneNumber>
+    <email/>
+    <membership>false</membership>
+    <comment/>
+    <address/>
+    <voted>false</voted>
+  </Player>
+  <Player>
+    <ID>7</ID>
+    <name>Aragorn</name>
+    <phoneNumber>50489621</phoneNumber>
+    <email>king.of.Godnor@true.me</email>
+    <membership>true</membership>
+    <comment/>
+    <address/>
+    <voted>false</voted>
+  </Player>
+  <Player>
+    <ID>8</ID>
+    <name>Gimli</name>
+    <phoneNumber>89456216</phoneNumber>
+    <email>sonOfGloin@notDurin.me</email>
+    <membership>true</membership>
+    <comment/>
+    <address>Under the hill 23</address>
+    <voted>false</voted>
+    <feePayment>
+      <day>16</day>
+      <month>12</month>
+      <year>2022</year>
+    </feePayment>
   </Player>
 </PlayersList>

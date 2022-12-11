@@ -2,48 +2,52 @@
 <EventsList>
   <Event>
     <ID>0</ID>
-    <name>Chess Night</name>
-    <location>Palace</location>
-    <startingDate>
-      <day>3</day>
-      <month>2</month>
-      <year>2003</year>
-      <hour>5</hour>
-      <minute>12</minute>
-    </startingDate>
-    <endingDate>
-      <day>6</day>
-      <month>2</month>
-      <year>2023</year>
-      <hour>5</hour>
-      <minute>12</minute>
-    </endingDate>
-    <description>lalallal</description>
+    <name>Gandalf‘s birthday </name>
+    <location>Mount Doom</location>
+    <fromDate>
+      <day>11</day>
+      <month>12</month>
+      <year>2022</year>
+    </fromDate>
+    <fromHours>15</fromHours>
+    <fromMinutes>0</fromMinutes>
+    <toDate>
+      <day>13</day>
+      <month>12</month>
+      <year>2022</year>
+    </toDate>
+    <toHours>0</toHours>
+    <toMinutes>0</toMinutes>
+    <description>Bring costumes !</description>
     <playersIDs/>
-    <comment>haha</comment>
-    <link>hhh</link>
+    <comment>I need to prepare food for 20 people</comment>
+    <link>https://lotr.fandom.com/wiki/Mount_Doom</link>
   </Event>
   <Event>
-    <ID>0</ID>
-    <name>Chess LOLOL Night</name>
-    <location>Palace</location>
-    <startingDate>
-      <day>6</day>
-      <month>2</month>
-      <year>2023</year>
-      <hour>5</hour>
-      <minute>12</minute>
-    </startingDate>
-    <endingDate>
-      <day>6</day>
-      <month>2</month>
-      <year>2023</year>
-      <hour>5</hour>
-      <minute>12</minute>
-    </endingDate>
-    <description>lalallal</description>
-    <playersIDs/>
-    <comment>haha</comment>
-    <link>hhh</link>
+    <ID>1</ID>
+    <name>Creation of new ring</name>
+    <location>Minas Thirit</location>
+    <fromDate>
+      <day>28</day>
+      <month>1</month>
+      <year>2022</year>
+    </fromDate>
+    <fromHours>16</fromHours>
+    <fromMinutes>0</fromMinutes>
+    <toDate>
+      <day>13</day>
+      <month>12</month>
+      <year>2022</year>
+    </toDate>
+    <toHours>18</toHours>
+    <toMinutes>0</toMinutes>
+    <description/>
+    <playersIDs>
+      <ID>5</ID>
+      <ID>4</ID>
+      <ID>3</ID>
+    </playersIDs>
+    <comment/>
+    <link/>
   </Event>
 </EventsList>

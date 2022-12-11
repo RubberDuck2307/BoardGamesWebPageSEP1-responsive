@@ -119,8 +119,8 @@ let players = await getPlayers()
 let borrowings = await getCurrentBorrowings()
 
 
-let textSmallTable = ""
-let textBigTable = "<div class=\"row\">\n"
+let textSmallTable = "<p class=\"description\">You can borrow these board games:</p> "
+let textBigTable = "<p class=\"description\">You can borrow these board games:</p> <div class=\"row\">\n"
 
 let highRatedGames = await calculateRatings()
 if (highRatedGames.length < 4) {
@@ -393,7 +393,7 @@ textSmallTable += "</div> </div> </div> "
 textBigTable += "</div>"
 $("#catalogueSmallTable").html(textSmallTable)
 $("#catalogueBigTable").html(textBigTable)
-let reservationTableText = "<div class=\"row\">"
+let reservationTableText = "<h4 class='text-center mb-3'>Reservations</h4>"
 
 
 for (let i = 0; i < boardGames.length; i++) {
@@ -417,7 +417,7 @@ for (let i = 0; i < boardGames.length; i++) {
                     "                    <div class=\"collapse\" id=\"reservation" + i + "\">\n" +
                     "                        <table class=\"table\">\n" +
                     "                            <thead>\n" +
-                    "                            <th>Borrower</th>\n" +
+                    "                            <th>Reserved by</th>\n" +
                     "                            <th>From</th>\n" +
                     "                            <th>To</th>\n" +
                     "                            </thead>\n"
@@ -442,12 +442,11 @@ reservationTableText += "            </div>\n" +
     "        </div>\n"
 $("#reservationTable").html(reservationTableText)
 
-
 let textElectionBig = ""
 let textElectionSmall = ""
 
 let election = await getElection()
-console.log(election)
+
 if (election != null) {
     textElectionBig += "        <h2 class=\"text-center\"> Election </h2>\n" +
         "                       <p class = \"description\">There are ongoing election about a new board game till  " + election.endingDay +"/" + election.endingMonth +"/" + election.endingYear + "</p> " +
@@ -472,7 +471,9 @@ if (election != null) {
                 "                        <tr>\n" +
                 "                            <th>Genre</th>\n" +
                 "                            <td>" + boardGames[i].type + "</td>\n" +
-                "                        </tr>"
+                "                        </tr>" +
+                "                        </table>\n" +
+                "                    </div>\n"
 
             textElectionSmall += "<div class=\"col-12 d-grid\">\n" +
                 "                    <a class=\"btn btn-primary text-start\" data-bs-toggle=\"collapse\" href=\"#CTBB1\" role=\"button\"\n" +
@@ -493,15 +494,13 @@ if (election != null) {
                 "                    </div> "
         }
     }
-    textElectionBig += "                    </table>\n" +
-        "                </div>\n" +
+    textElectionBig +=
         "            </div>\n" +
         "        </div>"
     textElectionSmall += "                </div>\n" +
         "            </div>\n" +
         "        </div>"
 }
-console.log(textElectionBig)
 $("#ElectionBig").html(textElectionBig)
 $("#electionSmall").html(textElectionSmall)
 

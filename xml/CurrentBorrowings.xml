@@ -2,34 +2,66 @@
 <borrowingsList>
   <Borrowing>
     <ID>0</ID>
-    <playerID>1</playerID>
-    <gameID>2</gameID>
+    <playerID>5</playerID>
+    <gameID>4</gameID>
     <from>
-      <day>24</day>
-      <month>3</month>
-      <year>2003</year>
+      <day>9</day>
+      <month>12</month>
+      <year>2022</year>
     </from>
     <to>
-      <day>24</day>
-      <month>11</month>
-      <year>2021</year>
+      <day>15</day>
+      <month>12</month>
+      <year>2022</year>
     </to>
-    <comment>s</comment>
+    <comment/>
+  </Borrowing>
+  <Borrowing>
+    <ID>1</ID>
+    <playerID>4</playerID>
+    <gameID>0</gameID>
+    <from>
+      <day>11</day>
+      <month>12</month>
+      <year>2022</year>
+    </from>
+    <to>
+      <day>15</day>
+      <month>12</month>
+      <year>2022</year>
+    </to>
+    <comment/>
+  </Borrowing>
+  <Borrowing>
+    <ID>2</ID>
+    <playerID>4</playerID>
+    <gameID>7</gameID>
+    <from>
+      <day>11</day>
+      <month>12</month>
+      <year>2022</year>
+    </from>
+    <to>
+      <day>14</day>
+      <month>12</month>
+      <year>2022</year>
+    </to>
+    <comment/>
   </Borrowing>
   <Borrowing>
     <ID>3</ID>
-    <playerID>2</playerID>
-    <gameID>4</gameID>
+    <playerID>4</playerID>
+    <gameID>16</gameID>
     <from>
-      <day>24</day>
-      <month>3</month>
-      <year>2003</year>
+      <day>11</day>
+      <month>12</month>
+      <year>2022</year>
     </from>
     <to>
-      <day>24</day>
-      <month>3</month>
-      <year>2003</year>
+      <day>14</day>
+      <month>12</month>
+      <year>2022</year>
     </to>
-    <comment>s</comment>
+    <comment/>
   </Borrowing>
 </borrowingsList>

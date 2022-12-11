@@ -2,20 +2,50 @@
 <reservationsList>
   <reservation>
     <ID>0</ID>
-    <playerID>1</playerID>
-    <gameID>4</gameID>
+    <playerID>3</playerID>
+    <gameID>7</gameID>
     <from>
-      <day>24</day>
-      <month>3</month>
-      <year>2003</year>
+      <day>14</day>
+      <month>12</month>
+      <year>2022</year>
     </from>
     <to>
-      <day>24</day>
-      <month>5</month>
-      <year>2003</year>
+      <day>19</day>
+      <month>12</month>
+      <year>2022</year>
     </to>
-    <comment>xx</comment>
-    <ASAP>true</ASAP>
-    <queue>2</queue>
+    <comment/>
+  </reservation>
+  <reservation>
+    <ID>1</ID>
+    <playerID>2</playerID>
+    <gameID>0</gameID>
+    <from>
+      <day>15</day>
+      <month>12</month>
+      <year>2022</year>
+    </from>
+    <to>
+      <day>18</day>
+      <month>12</month>
+      <year>2022</year>
+    </to>
+    <comment/>
+  </reservation>
+  <reservation>
+    <ID>2</ID>
+    <playerID>8</playerID>
+    <gameID>16</gameID>
+    <from>
+      <day>14</day>
+      <month>12</month>
+      <year>2022</year>
+    </from>
+    <to>
+      <day>19</day>
+      <month>12</month>
+      <year>2022</year>
+    </to>
+    <comment/>
   </reservation>
 </reservationsList>

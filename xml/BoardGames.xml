@@ -1,49 +1,179 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<PlayersList>
+<BoardGamesList>
+  <BoardGame>
+    <ID>0</ID>
+    <name>Monapoly</name>
+    <type>Deck Building</type>
+    <numberOfPlayersMin>2</numberOfPlayersMin>
+    <numberOfPlayersMax>8</numberOfPlayersMax>
+    <availabilityStatus>Borrowed</availabilityStatus>
+    <comment/>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
   <BoardGame>
     <ID>1</ID>
-    <name>Monopoly</name>
-    <type>Engine Building</type>
+    <name>Dungeons and Dragons e4</name>
+    <type>RPG</type>
     <numberOfPlayersMin>2</numberOfPlayersMin>
-    <numberOfPlayersMax>6</numberOfPlayersMax>
+    <numberOfPlayersMax>8</numberOfPlayersMax>
     <availabilityStatus>Available</availabilityStatus>
-    <comment>dd</comment>
-    <ownerID>1</ownerID>
-    <numberOfVotes>4</numberOfVotes>
+    <comment/>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
   </BoardGame>
   <BoardGame>
     <ID>2</ID>
-    <name>Amazing Game</name>
-    <type>Engine Building</type>
+    <name>Cards</name>
+    <type>Deck Building</type>
     <numberOfPlayersMin>1</numberOfPlayersMin>
-    <numberOfPlayersMax>4</numberOfPlayersMax>
-    <availabilityStatus>Borrowed</availabilityStatus>
-    <comment>dd</comment>
-    <ownerID>2</ownerID>
-    <numberOfVotes>4</numberOfVotes>
-  </BoardGame>
-  <BoardGame>
-    <ID>3</ID>
-    <name>Awesome Game</name>
-    <type>Engine Building</type>
-    <numberOfPlayersMin>4</numberOfPlayersMin>
-    <numberOfPlayersMax>4</numberOfPlayersMax>
-    <availabilityStatus>Borrowed</availabilityStatus>
-    <comment>dd</comment>
-    <ownerID>2</ownerID>
-    <numberOfVotes>4</numberOfVotes>
+    <numberOfPlayersMax>6</numberOfPlayersMax>
+    <availabilityStatus>Unavailable</availabilityStatus>
+    <comment>One card is missing</comment>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
   </BoardGame>
   <BoardGame>
     <ID>4</ID>
-    <name>Very good Game</name>
+    <name>Chess</name>
+    <type>Other</type>
+    <numberOfPlayersMin>2</numberOfPlayersMin>
+    <numberOfPlayersMax>2</numberOfPlayersMax>
+    <availabilityStatus>Borrowed</availabilityStatus>
+    <comment/>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>5</ID>
+    <name>Pathfinder</name>
+    <type>RPG</type>
+    <numberOfPlayersMin>2</numberOfPlayersMin>
+    <numberOfPlayersMax>8</numberOfPlayersMax>
+    <availabilityStatus>Available</availabilityStatus>
+    <comment/>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>6</ID>
+    <name>Dungeons and Dragone e5</name>
+    <type>RPG</type>
+    <numberOfPlayersMin>2</numberOfPlayersMin>
+    <numberOfPlayersMax>8</numberOfPlayersMax>
+    <availabilityStatus>Unavailable</availabilityStatus>
+    <comment/>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>7</ID>
+    <name>Catan</name>
+    <type>Work Placement</type>
+    <numberOfPlayersMin>2</numberOfPlayersMin>
+    <numberOfPlayersMax>8</numberOfPlayersMax>
+    <availabilityStatus>Borrowed</availabilityStatus>
+    <comment/>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>8</ID>
+    <name>Exploding kittens</name>
+    <type>Deck Building</type>
+    <numberOfPlayersMin>2</numberOfPlayersMin>
+    <numberOfPlayersMax>8</numberOfPlayersMax>
+    <availabilityStatus>Available</availabilityStatus>
+    <comment/>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>9</ID>
+    <name>Terraforming Mars</name>
+    <type>Work Placement</type>
+    <numberOfPlayersMin>2</numberOfPlayersMin>
+    <numberOfPlayersMax>4</numberOfPlayersMax>
+    <availabilityStatus>Available</availabilityStatus>
+    <comment/>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>10</ID>
+    <name>Secret Hitler</name>
+    <type>Social Deduction</type>
+    <numberOfPlayersMin>2</numberOfPlayersMin>
+    <numberOfPlayersMax>4</numberOfPlayersMax>
+    <availabilityStatus>Available</availabilityStatus>
+    <comment/>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>11</ID>
+    <name>Cards Against Humanity</name>
+    <type>Without Dice</type>
+    <numberOfPlayersMin>2</numberOfPlayersMin>
+    <numberOfPlayersMax>8</numberOfPlayersMax>
+    <availabilityStatus>Available</availabilityStatus>
+    <comment/>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>12</ID>
+    <name>Codenames</name>
+    <type>Social Deduction</type>
+    <numberOfPlayersMin>2</numberOfPlayersMin>
+    <numberOfPlayersMax>4</numberOfPlayersMax>
+    <availabilityStatus>Available</availabilityStatus>
+    <comment/>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>13</ID>
+    <name>Scythe</name>
+    <type>Work Placement</type>
+    <numberOfPlayersMin>2</numberOfPlayersMin>
+    <numberOfPlayersMax>8</numberOfPlayersMax>
+    <availabilityStatus>Considered to be bought</availabilityStatus>
+    <comment/>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>14</ID>
+    <name>Small World</name>
     <type>Engine Building</type>
     <numberOfPlayersMin>4</numberOfPlayersMin>
-    <numberOfPlayersMax>4</numberOfPlayersMax>
+    <numberOfPlayersMax>6</numberOfPlayersMax>
     <availabilityStatus>Considered to be bought</availabilityStatus>
-    <comment>dd</comment>
+    <comment/>
     <ownerID>0</ownerID>
-    <numberOfVotes>4</numberOfVotes>
+    <numberOfVotes>0</numberOfVotes>
   </BoardGame>
-
-
-</PlayersList>
+  <BoardGame>
+    <ID>15</ID>
+    <name>Wingspan</name>
+    <type>Deck Building</type>
+    <numberOfPlayersMin>1</numberOfPlayersMin>
+    <numberOfPlayersMax>5</numberOfPlayersMax>
+    <availabilityStatus>Considered to be bought</availabilityStatus>
+    <comment/>
+    <ownerID>0</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
+  <BoardGame>
+    <ID>16</ID>
+    <name>Find Your T-rex</name>
+    <type>Social Deduction</type>
+    <numberOfPlayersMin>1</numberOfPlayersMin>
+    <numberOfPlayersMax>5</numberOfPlayersMax>
+    <availabilityStatus>Available</availabilityStatus>
+    <comment/>
+    <ownerID>6</ownerID>
+    <numberOfVotes>0</numberOfVotes>
+  </BoardGame>
+</BoardGamesList>
