@@ -5,14 +5,14 @@
     <playerID>5</playerID>
     <gameID>4</gameID>
     <from>
-      <day>9</day>
-      <month>12</month>
-      <year>2022</year>
+      <day>14</day>
+      <month>1</month>
+      <year>2023</year>
     </from>
     <to>
-      <day>15</day>
-      <month>12</month>
-      <year>2022</year>
+      <day>20</day>
+      <month>1</month>
+      <year>2023</year>
     </to>
     <comment/>
   </Borrowing>
@@ -21,14 +21,14 @@
     <playerID>4</playerID>
     <gameID>0</gameID>
     <from>
-      <day>11</day>
-      <month>12</month>
-      <year>2022</year>
+      <day>15</day>
+      <month>1</month>
+      <year>2023</year>
     </from>
     <to>
-      <day>15</day>
-      <month>12</month>
-      <year>2022</year>
+      <day>20</day>
+      <month>1</month>
+      <year>2023</year>
     </to>
     <comment/>
   </Borrowing>
@@ -37,14 +37,14 @@
     <playerID>4</playerID>
     <gameID>7</gameID>
     <from>
-      <day>11</day>
-      <month>12</month>
-      <year>2022</year>
+      <day>1</day>
+      <month>1</month>
+      <year>2023</year>
     </from>
     <to>
-      <day>14</day>
-      <month>12</month>
-      <year>2022</year>
+      <day>24</day>
+      <month>1</month>
+      <year>2023</year>
     </to>
     <comment/>
   </Borrowing>
@@ -53,13 +53,13 @@
     <playerID>4</playerID>
     <gameID>16</gameID>
     <from>
-      <day>11</day>
-      <month>12</month>
+      <day>15</day>
+      <month>1</month>
       <year>2022</year>
     </from>
     <to>
-      <day>14</day>
-      <month>12</month>
+      <day>20</day>
+      <month>1</month>
       <year>2022</year>
     </to>
     <comment/>

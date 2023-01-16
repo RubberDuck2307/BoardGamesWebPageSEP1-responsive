@@ -260,6 +260,7 @@ if (highRatedGames.length < 4) {
 }
 
 let index = 3
+
 for (let i = 0; i < boardGames.length; i++) {
 
     let availability = ""
@@ -333,11 +334,12 @@ for (let i = 0; i < boardGames.length; i++) {
                 "                            </tr>\n"
         }
 
+        console.log(borrowedTo)
         if (!borrowedTo == "") {
 
             textSmallTable += "                            <tr>\n" +
-                "                                <th>Borrowed to:</th>\n" +
-                "                                <td>17/10/2022</td>\n" +
+                "                                <th>Borrowed to</th>\n" +
+                "                                <td> "+ borrowedTo + "</td>\n" +
                 "                            </tr>\n"
         }
 
@@ -378,8 +380,8 @@ for (let i = 0; i < boardGames.length; i++) {
         if (!borrowedTo == "") {
 
             textBigTable += "                            <tr>\n" +
-                "                                <th>Borrowed to:</th>\n" +
-                "                                <td>17/10/2022</td>\n" +
+                "                                <th>Borrowed to</th>\n" +
+                "                                <td>"+ borrowedTo +"</td>\n" +
                 "                            </tr>\n"
         }
         textBigTable +=

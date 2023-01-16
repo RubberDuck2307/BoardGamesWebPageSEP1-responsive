@@ -37,7 +37,7 @@ for (let i = 0; i < events.length; i++) {
         "                                <img src=\"images/chess.png\" class=\"card-img-top\" alt=\"Chess\">\n" +
         "                                <div class=\"card-body\">\n" +
         "                                    <h5 class=\"card-title\">" + events[i].name + "</h5>\n"
-    if (events[i].startingDay == events[i].endingDay && events[i].endingMonth == events[i].startingMonth) {
+    if (events[i].startingDay === events[i].endingDay && events[i].endingMonth === events[i].startingMonth) {
         text += "<p class=\"card-text\">Date: " + events[i].startingDay + "/" + events[i].startingMonth + " " + events[i].startingTime + " - " + events[i].endingTime + "</p>\n"
     } else {
         text += "<p class=\"card-text\">Date: " + events[i].startingDay + "/" + events[i].startingMonth + " " + events[i].startingTime + " - " + events[i].endingDay + "/" + events[i].endingMonth + " " + events[i].endingTime + "</p>\n"
