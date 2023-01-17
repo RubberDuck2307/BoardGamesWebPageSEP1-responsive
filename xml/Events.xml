@@ -5,16 +5,16 @@
     <name>Gandalf‘s birthday </name>
     <location>Mount Doom</location>
     <fromDate>
-      <day>11</day>
-      <month>12</month>
-      <year>2022</year>
+      <day>19</day>
+      <month>1</month>
+      <year>2023</year>
     </fromDate>
     <fromHours>15</fromHours>
     <fromMinutes>0</fromMinutes>
     <toDate>
-      <day>13</day>
-      <month>12</month>
-      <year>2022</year>
+      <day>20</day>
+      <month>1</month>
+      <year>2023</year>
     </toDate>
     <toHours>0</toHours>
     <toMinutes>0</toMinutes>
@@ -35,9 +35,9 @@
     <fromHours>16</fromHours>
     <fromMinutes>0</fromMinutes>
     <toDate>
-      <day>13</day>
-      <month>12</month>
-      <year>2022</year>
+      <day>30</day>
+      <month>1</month>
+      <year>2023</year>
     </toDate>
     <toHours>18</toHours>
     <toMinutes>0</toMinutes>
